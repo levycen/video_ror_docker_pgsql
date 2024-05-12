@@ -12,7 +12,8 @@ WORKDIR /rails
 
 # Install base packages
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl libjemalloc2 libvips postgresql-client
+    apt-get install --no-install-recommends -y curl libjemalloc2 libvips postgresql-client \
+    build-essential bash bash-completion libffi-dev tzdata postgresql nodejs npm yarn
 
 # Set production environment
 ENV RAILS_ENV="production" \
